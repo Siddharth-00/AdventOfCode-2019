@@ -24,14 +24,14 @@ def store_address(arr, mode, j, val, base): #Store values in array
     return x #Send new version of array back
 def opcode1(arr, string, j, base): #Opcode 1
     param1 = get_address(arr, int(string[-3]), j+1, base) #Get 1st Param
-    param2 = get_address(arr, int(string[-4]), j+2, base) #Get 2n Param
+    param2 = get_address(arr, int(string[-4]), j+2, base) #Get 2nd Param
     return(store_address(arr, 0, j+3, param1 + param2, base)) #Store sum of two params, mode for storing  is set to 0
 def opcode2(arr, string, j, base): #Opcode 2
     param1 = get_address(arr, int(string[-3]), j+1, base) #Get 1st Param
-    param2 = get_address(arr, int(string[-4]), j+2, base) #Get 2n Param
+    param2 = get_address(arr, int(string[-4]), j+2, base) #Get 2nd Param
     return(store_address(arr, 0, j+3, param1 * param2, base)) #Store product of two params, mode for storing  is set to 0
 def opcode3(arr, string, j, base): #Opcode 3
-    return(store_address(arr, int(string[-3]), j+1, int(input()), base)) #Store input in correct position
+    return(store_address(arr, int(string[-3]), j+1, int(input("input: ")), base)) #Store input in correct position
 def opcode4(arr, string, j, base): #Opcode 4
     output.append(get_address(arr, int(string[-3]), j+1, base)) #Add value at address to global output variable
     return arr #Send arr back 
