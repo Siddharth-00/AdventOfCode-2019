@@ -91,6 +91,6 @@ def BOOST(arr): #Main Function
 BOOST(mainArr + [0] * 100000) #BOOST: Main function. Pad array with 0s to allow for extra memory
 print(output[-1]) #Print last output
 
-
+#Current Output: 313733694
 
     
